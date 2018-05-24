@@ -1,20 +1,49 @@
 package webshop.models;
 
 public class Proizvod {
-
     private int id;
     private String naziv;
     private Double cijenaPoKomadu;
-    private int kategorijaId;
+    private Kategorija kategorija;
+    private Slika slika;
 
     public Proizvod() {
     }
 
-    public Proizvod(int id, String naziv, Double cijenaPoKomadu, int kategorijaId) {
+    public Proizvod(int id, String naziv, Double cijenaPoKomadu, Kategorija kategorija, Slika slika) {
         this.id = id;
         this.naziv = naziv;
         this.cijenaPoKomadu = cijenaPoKomadu;
-        this.kategorijaId = kategorijaId;
+        this.kategorija = kategorija;
+        this.slika = slika;
+    }
+
+    /**
+     * @return the kategorija
+     */
+    public Kategorija getKategorija() {
+        return kategorija;
+    }
+
+    /**
+     * @param kategorija the kategorija to set
+     */
+    public void setKategorija(Kategorija kategorija) {
+        this.kategorija = kategorija;
+    }
+
+    /**
+     * @return the slika
+     */
+    public Slika getSlika() {
+        return slika;
+    }
+
+    /**
+     * @param slika the slika to set
+     */
+    public void setSlika(Slika slika) {
+        this.slika = slika;
     }
 
     /**
@@ -62,14 +91,4 @@ public class Proizvod {
     /**
      * @return the kategorijaId
      */
-    public int getKategorijaId() {
-        return kategorijaId;
-    }
-
-    /**
-     * @param kategorijaId the kategorijaId to set
-     */
-    public void setKategorijaId(int kategorijaId) {
-        this.kategorijaId = kategorijaId;
-    }
 }

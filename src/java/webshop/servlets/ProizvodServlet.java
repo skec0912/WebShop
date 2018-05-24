@@ -30,25 +30,25 @@ public class ProizvodServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
          try {
-            int catId = Integer.parseInt(request.getParameter("catId"));
-            
-            List<Proizvod> proizvodi = new Repository().dohvatiProizvodeKategorije(catId);
-            
-            request.getSession().setAttribute("proizvodi", proizvodi);
-            
-           response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Moj servlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Integer kategorije je " + proizvodi.get(0).getNaziv() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+//            int catId = Integer.parseInt(request.getParameter("catId"));
+//            
+//            List<Proizvod> proizvodi = new Repository().dohvatiProizvodeKategorije(catId);
+//            
+//            request.getSession().setAttribute("proizvodi", proizvodi);
+//            
+//           response.setContentType("text/html;charset=UTF-8");
+//        try (PrintWriter out = response.getWriter()) {
+//            /* TODO output your page here. You may use following sample code. */
+//            out.println("<!DOCTYPE html>");
+//            out.println("<html>");
+//            out.println("<head>");
+//            out.println("<title>Moj servlet</title>");            
+//            out.println("</head>");
+//            out.println("<body>");
+//            out.println("<h1>Integer kategorije je " + proizvodi.get(0).getNaziv() + "</h1>");
+//            out.println("</body>");
+//            out.println("</html>");
+//        }
             //response.sendRedirect("products.jsp");
         }
         catch (Exception exc) {
